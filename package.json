@@ -23,5 +23,9 @@
   "homepage": "https://github.com/caitoreilly/contact-card#readme",
   "dependencies": {
     "concurrently": "^7.6.0"
-  }
+  },
+  "engines": {
+    "node": "16.17.0"
+  },
+  "heroku-prebuild": "npm install --dev"
 }

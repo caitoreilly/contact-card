@@ -1,4 +1,6 @@
 const path = require("path");
+//import html-webpack-plugin
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -13,8 +15,28 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
       },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [["@babel/preset-env", { targets: "defaults" }]],
+          },
+        },
+      },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./index.html",
+      title: "Webpack Plugin",
+    }),
+  ],
 };
 
 // the entry indicates the file webpack will use to start the dependency graph (entry point)

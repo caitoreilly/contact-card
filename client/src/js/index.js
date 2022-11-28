@@ -1,4 +1,4 @@
-//imports
+//import modules
 
 import "./form";
 import "./submit";
@@ -9,6 +9,22 @@ import "./submit";
 // we need logic from form.js & submit.js for app to work so we must import them!
 // also so they will be included in the bundle
 
+// import CSS files
+import "../css/index.css";
+
+// import images
 import Logo from "../images/logo.png";
 import Bear from "../images/bear.png";
 import Dog from "../images/dog.png";
+
+// add images on load
+// use DOM manipulation to insert images into our page with this code
+window.addEventListener("load", function () {
+  document.getElementById("logo").src = Logo;
+  document.getElementById("bearThumbnail").src = Bear;
+  document.getElementById("dogThumbnail").src = Dog;
+});
+
+// import Bootstrap's npm modules
+import { Tooltip, Toast, Popper } from "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
