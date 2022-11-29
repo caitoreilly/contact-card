@@ -18,12 +18,18 @@ import Bear from "../images/bear.png";
 import Dog from "../images/dog.png";
 
 // import initdb function from database.js & then call it inside of window event listener
-import { initdb } from "./database";
+import { initdb, getDb, postDb } from "./database";
+
+// import getDb() async function from database.js & call it inside of on-load event listener
 
 // add images on load
 // use DOM manipulation to insert images into our page with this code
 window.addEventListener("load", function () {
   initdb();
+  // temporarily place getDb and postDb function calls here for testing!
+  getDb();
+  postDb("Lernantino", "lernantino@test.com", 8186601234, "Bear");
+  getDb();
   document.getElementById("logo").src = Logo;
   document.getElementById("bearThumbnail").src = Bear;
   document.getElementById("dogThumbnail").src = Dog;
