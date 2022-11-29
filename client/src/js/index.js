@@ -17,9 +17,13 @@ import Logo from "../images/logo.png";
 import Bear from "../images/bear.png";
 import Dog from "../images/dog.png";
 
+// import initdb function from database.js & then call it inside of window event listener
+import { initdb } from "./database";
+
 // add images on load
 // use DOM manipulation to insert images into our page with this code
 window.addEventListener("load", function () {
+  initdb();
   document.getElementById("logo").src = Logo;
   document.getElementById("bearThumbnail").src = Bear;
   document.getElementById("dogThumbnail").src = Dog;
