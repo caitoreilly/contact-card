@@ -1,4 +1,4 @@
-// import { getDb } from "./database";
+import { getDb } from "./database";
 import Bear from "../images/bear.png";
 import Dog from "../images/dog.png";
 
