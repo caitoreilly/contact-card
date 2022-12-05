@@ -25,14 +25,7 @@ import { initdb, getDb, postDb } from "./database";
 // use DOM manipulation to insert images into our page with this code
 window.addEventListener("load", function () {
   initdb();
-<<<<<<< HEAD
-  // temporarily place getDb and postDb function calls here for testing!
-  getDb();
-  postDb("Lernantino", "lernantino@test.com", 8186601234, "Bear");
-  getDb();
-=======
   fetchCards();
->>>>>>> feature/indexeddb
   document.getElementById("logo").src = Logo;
   document.getElementById("bearThumbnail").src = Bear;
   document.getElementById("dogThumbnail").src = Dog;
